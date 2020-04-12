@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guest Navigation &mdash; Track</title>
+  	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/maps.css">
+    <link rel="stylesheet" href="css/preloader.css">
+	<link rel="shortcut icon" href="img/pin.ico" type="image/x-icon">
+</head>
+<body>
+
+    
+    <div id="user_div" class="loggedin-div">
+        <h3>Welcome Guide</h3>
+        <p id="user_para">Welcome to Guest Navigation</p>
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    <div id="map"></div>
+
+    <div id="preloader">
+		<div class="preloader">
+		  <span></span>
+		  <span></span>
+		  <span></span>
+		  <span></span>
+		</div>
+	</div>
+
+  <script>
+    var map;
+    function initMap() {
+      map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: -34.397, lng: 150.644},
+        zoom: 8
+      });
+    }
+  </script>
+  
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcEm67PYRoN-SYSTA7QlSWkNhgTVx7Edg&callback=initMap"
+  async defer></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+        apiKey: "AIzaSyCEmdee2UMaZ9cveq7pV1zDr1TAJyK7FrY",
+        authDomain: "guest-navigation.firebaseapp.com",
+        authDomain: "guest-navigation.firebaseapp.com",
+        projectId: "guest-navigation",
+        storageBucket: "guest-navigation.appspot.com",
+        messagingSenderId: "227305499745",
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    
+    <script src="js/track.js"></script>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

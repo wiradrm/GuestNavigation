@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Guest Navigation &mdash; Login</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="css/preloader.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	<link rel="shortcut icon" href="img/pin.ico" type="image/x-icon">
+</head>
+<body>
+	<img class="wave" src="img/waves.png">
+	<div class="container">
+		<div class="img">
+			<img src="img/back.svg">
+		</div>
+		<div class="login-content">
+			<form>
+				<img src="img/avatar.svg">
+				<h2 class="title">Login</h2>
+           		<div class="input-div one">
+           		   <div class="i">
+           		   		<i class="fas fa-user"></i>
+           		   </div>
+           		   <div class="div">
+           		   		<h5>Username</h5>
+           		   		<input type="email" class="input" id="email_field">
+           		   </div>
+           		</div>
+           		<div class="input-div pass">
+           		   <div class="i"> 
+           		    	<i class="fas fa-lock"></i>
+           		   </div>
+           		   <div class="div">
+           		    	<h5>Password</h5>
+           		    	<input type="password" class="input" id="password_field">
+            	   </div>
+            	</div>
+            	<a href="#">Forgot Password?</a>
+            	<input type="button" class="btn" onclick="login()" value="Login">
+            </form>
+        </div>
+	</div>
+
+	<div id="preloader">
+		<div class="preloader">
+		  <span></span>
+		  <span></span>
+		  <span></span>
+		  <span></span>
+		</div>
+	</div>
+	
+
+	<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  	<script>
+    	// Initialize Firebase
+    	var config = {
+		apiKey: "AIzaSyCEmdee2UMaZ9cveq7pV1zDr1TAJyK7FrY",
+		authDomain: "guest-navigation.firebaseapp.com",
+		authDomain: "guest-navigation.firebaseapp.com",
+		projectId: "guest-navigation",
+		storageBucket: "guest-navigation.appspot.com",
+		messagingSenderId: "227305499745",
+    	};
+    	firebase.initializeApp(config);
+  	</script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>
